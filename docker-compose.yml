@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  database:
+    image: mysql
+    container_name: SQL-Consultas-Alura
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: sucos_vendas
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+      - pgdata:/data/mysql
+
+volumes:
+  pgdata:
+    driver: local

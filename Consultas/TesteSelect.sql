@@ -1,0 +1,1 @@
+Select * From notas_fiscais;
